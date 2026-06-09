@@ -8,7 +8,7 @@
               <p className="text-[10px] uppercase tracking-[0.45em] text-mauve-500/80 transition-colors group-hover:text-mauve-600">Marseille — Place de la Plaine</p>
               <h1 className="mt-2 font-serif text-3xl tracking-[0.25em] text-terracotta-950 outline-none">LE CULTI</h1>
             </div>
-            <a href="#private" className="group relative overflow-hidden rounded-full bg-neutral-900 px-8 py-3 text-[11px] font-bold uppercase tracking-[0.25em] text-white shadow-lg transition-all hover:scale-[1.02] active:scale-[0.98]">
+            <a href="#event" className="group relative overflow-hidden rounded-full bg-neutral-900 px-8 py-3 text-[11px] font-bold uppercase tracking-[0.25em] text-white shadow-lg transition-all hover:scale-[1.02] active:scale-[0.98]">
               <span className="relative z-10">Réserver</span>
               <div className="absolute inset-0 -translate-x-full bg-terracotta-800 transition-transform duration-500 group-hover:translate-x-0" />
             </a>
@@ -66,5 +66,36 @@
               <div className="absolute -bottom-6 -left-6 h-40 w-40 rounded-full border border-terracotta-200/30" />
             </div>
           </div>
+
+          <section id="event" className="mt-20 rounded-[32px] border border-neutral-200 bg-white/70 p-8 shadow-sm backdrop-blur-sm lg:mt-24 lg:p-10">
+            <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
+              <div>
+                <p className="text-[10px] uppercase tracking-[0.45em] text-mauve-600">Événement à venir</p>
+                <h3 className="mt-3 font-serif text-4xl leading-tight text-neutral-900 lg:text-5xl">Jeudi 11 juin 2026</h3>
+                <p className="mt-4 max-w-2xl text-sm leading-relaxed text-neutral-600 lg:text-base">
+                  Une nuit musicale à Marseille avec Malik Djoudi, Yuksek et Pablo Valentino à La Digue MPCT.
+                  L’événement est complet — inscription sur liste d’attente disponible.
+                </p>
+              </div>
+              <div className="flex flex-wrap gap-3">
+                <span className="rounded-full border border-neutral-200 bg-[#fcf9f7] px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-neutral-700">Marseille</span>
+                <span className="rounded-full border border-neutral-200 bg-[#fcf9f7] px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-neutral-700">Liste d’attente</span>
+                <span className="rounded-full border border-neutral-200 bg-[#fcf9f7] px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-neutral-700">Club du Son</span>
+              </div>
+            </div>
+
+            <div className="mt-8 grid gap-4 md:grid-cols-3">
+              {[
+                { label: 'Line-up', value: 'Malik Djoudi · Yuksek · Pablo Valentino' },
+                { label: 'Lieu', value: 'À La Digue MPCT' },
+                { label: 'CTA', value: 'Inscription liste d’attente / j’ai un code' },
+              ].map((item) => (
+                <div key={item.label} className="rounded-3xl border border-neutral-200 bg-white p-5">
+                  <p className="text-[10px] uppercase tracking-[0.35em] text-mauve-500">{item.label}</p>
+                  <p className="mt-3 text-sm leading-relaxed text-neutral-800">{item.value}</p>
+                </div>
+              ))}
+            </div>
+          </section>
         </div>
-      </section>
+      </section>"}]}},{
