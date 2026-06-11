@@ -61,7 +61,6 @@
                 </div>
               </div>
 
-              {/* Decorative graphic elements */}
               <div className="absolute -right-8 -top-8 -z-10 h-32 w-32 rounded-full bg-terracotta-100/50 blur-2xl lg:-right-12 lg:-top-12" />
               <div className="absolute -bottom-6 -left-6 h-40 w-40 rounded-full border border-terracotta-200/30" />
             </div>
@@ -71,24 +70,24 @@
             <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
               <div>
                 <p className="text-[10px] uppercase tracking-[0.45em] text-mauve-600">Événement à venir</p>
-                <h3 className="mt-3 font-serif text-4xl leading-tight text-neutral-900 lg:text-5xl">Jeudi 11 juin 2026</h3>
+                <h3 className="mt-3 font-serif text-4xl leading-tight text-neutral-900 lg:text-5xl">PAPA PAPA</h3>
                 <p className="mt-4 max-w-2xl text-sm leading-relaxed text-neutral-600 lg:text-base">
-                  Une nuit musicale à Marseille avec Malik Djoudi, Yuksek et Pablo Valentino à La Digue MPCT.
-                  L’événement est complet — inscription sur liste d’attente disponible.
+                  Exposition du 25 juin au 1er juillet. Vernissage le vendredi 26 juillet au Lavoir Vasserot, Saint-Tropez.
+                  Une affiche pensée comme une pièce de galerie : poétique, tactile et singulière.
                 </p>
               </div>
               <div className="flex flex-wrap gap-3">
-                <span className="rounded-full border border-neutral-200 bg-[#fcf9f7] px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-neutral-700">Marseille</span>
-                <span className="rounded-full border border-neutral-200 bg-[#fcf9f7] px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-neutral-700">Liste d’attente</span>
-                <span className="rounded-full border border-neutral-200 bg-[#fcf9f7] px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-neutral-700">Club du Son</span>
+                <span className="rounded-full border border-neutral-200 bg-[#fcf9f7] px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-neutral-700">Saint-Tropez</span>
+                <span className="rounded-full border border-neutral-200 bg-[#fcf9f7] px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-neutral-700">Exposition</span>
+                <span className="rounded-full border border-neutral-200 bg-[#fcf9f7] px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-neutral-700">Vernissage</span>
               </div>
             </div>
 
             <div className="mt-8 grid gap-4 md:grid-cols-3">
               {[
-                { label: 'Line-up', value: 'Malik Djoudi · Yuksek · Pablo Valentino' },
-                { label: 'Lieu', value: 'À La Digue MPCT' },
-                { label: 'CTA', value: 'Inscription liste d’attente / j’ai un code' },
+                { label: 'Dates', value: '25 juin → 1er juillet' },
+                { label: 'Vernissage', value: 'Vendredi 26 juillet' },
+                { label: 'Lieu', value: 'Lavoir Vasserot, Saint-Tropez' },
               ].map((item) => (
                 <div key={item.label} className="rounded-3xl border border-neutral-200 bg-white p-5">
                   <p className="text-[10px] uppercase tracking-[0.35em] text-mauve-500">{item.label}</p>
