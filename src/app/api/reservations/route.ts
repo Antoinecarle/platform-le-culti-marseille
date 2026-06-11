@@ -22,7 +22,7 @@ export async function POST(req: Request) {
     );
 
     return NextResponse.json({ reservation: result.rows[0] }, { status: 201 });
-  } catch (error) {
+  } catch {
     return NextResponse.json({ error: "Impossible de créer la réservation" }, { status: 500 });
   }
 }
@@ -32,7 +32,7 @@ export async function GET() {
     await ensureSchema();
     const result = await pool.query(`SELECT * FROM reservations ORDER BY created_at DESC LIMIT 50`);
     return NextResponse.json({ reservations: result.rows });
-    } catch {
+  } catch {
     return NextResponse.json({ error: "Impossible de charger les réservations" }, { status: 500 });
   }
 }
