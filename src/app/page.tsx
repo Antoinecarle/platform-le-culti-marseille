@@ -10,7 +10,7 @@ export default function Home() {
             <p className="text-[10px] uppercase tracking-[0.45em] text-mauve-500/80 transition-colors group-hover:text-mauve-600">Marseille — Place de la Plaine</p>
             <h1 className="mt-2 font-serif text-3xl tracking-[0.25em] text-terracotta-950 outline-none">LE CULTI</h1>
           </div>
-          <a href="#event" className="group relative overflow-hidden rounded-full bg-neutral-900 px-8 py-3 text-[11px] font-bold uppercase tracking-[0.25em] text-white shadow-lg transition-all hover:scale-[1.02] active:scale-[0.98]">
+          <a href="#reservation" className="group relative overflow-hidden rounded-full bg-neutral-900 px-8 py-3 text-[11px] font-bold uppercase tracking-[0.25em] text-white shadow-lg transition-all hover:scale-[1.02] active:scale-[0.98]">
             <span className="relative z-10">Réserver</span>
             <div className="absolute inset-0 -translate-x-full bg-terracotta-800 transition-transform duration-500 group-hover:translate-x-0" />
           </a>
@@ -122,6 +122,21 @@ export default function Home() {
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+
+        <section id="reservation" className="mt-8 rounded-[32px] border border-neutral-200 bg-white p-8 shadow-sm lg:p-10">
+          <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+            <div>
+              <p className="text-[10px] uppercase tracking-[0.45em] text-mauve-600">Réservation</p>
+              <h3 className="mt-3 font-serif text-4xl text-neutral-900 lg:text-5xl">Réserver une table</h3>
+              <p className="mt-3 max-w-2xl text-sm leading-relaxed text-neutral-600">
+                Le vrai système de réservation est prêt à être branché sur une base de données PostgreSQL.
+              </p>
+            </div>
+            <a href="/api/reservations" className="text-sm font-semibold text-neutral-900 underline underline-offset-4">
+              Voir l’API réservations
+            </a>
           </div>
         </section>
       </div>
