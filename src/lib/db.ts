@@ -19,6 +19,7 @@ export async function ensureSchema() {
       date date NOT NULL,
       time text NOT NULL,
       party_size int NOT NULL DEFAULT 2,
+      allergies text,
       notes text,
       created_at timestamptz DEFAULT now()
     );

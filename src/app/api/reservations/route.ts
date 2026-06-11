@@ -6,7 +6,7 @@ export const runtime = "nodejs";
 export async function POST(req: Request) {
   try {
     const body = await req.json();
-    const { name, date, time, party_size, email = null, phone = null, notes = null } = body;
+    const { name, date, time, party_size, email = null, phone = null, allergies = null, notes = null } = body;
 
     if (!name || !date || !time || !party_size) {
       return NextResponse.json({ error: "Champs obligatoires manquants" }, { status: 400 });
@@ -15,10 +15,10 @@ export async function POST(req: Request) {
     await ensureSchema();
 
     const result = await pool.query(
-      `INSERT INTO reservations (name, email, phone, date, time, party_size, notes)
-       VALUES ($1, $2, $3, $4, $5, $6, $7)
+      `INSERT INTO reservations (name, email, phone, date, time, party_size, allergies, notes)
+       VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
        RETURNING *`,
-      [name, email, phone, date, time, Number(party_size), notes],
+      [name, email, phone, date, time, Number(party_size), allergies, notes],
     );
 
     return NextResponse.json({ reservation: result.rows[0] }, { status: 201 });
