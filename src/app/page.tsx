@@ -1,3 +1,5 @@
+import ReservationForm from "@/components/ReservationForm";
+
 export default function Home() {
   return (
     <section className="relative min-h-[90vh] overflow-hidden bg-[#fcf9f7]">
@@ -131,13 +133,12 @@ export default function Home() {
               <p className="text-[10px] uppercase tracking-[0.45em] text-mauve-600">Réservation</p>
               <h3 className="mt-3 font-serif text-4xl text-neutral-900 lg:text-5xl">Réserver une table</h3>
               <p className="mt-3 max-w-2xl text-sm leading-relaxed text-neutral-600">
-                Le vrai système de réservation est prêt à être branché sur une base de données PostgreSQL.
+                Remplis le formulaire ci-dessous pour envoyer ta réservation directement.
               </p>
             </div>
-            <a href="/api/reservations" className="text-sm font-semibold text-neutral-900 underline underline-offset-4">
-              Voir l’API réservations
-            </a>
           </div>
+
+          <ReservationForm />
         </section>
       </div>
     </section>
