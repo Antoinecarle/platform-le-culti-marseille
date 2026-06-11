@@ -97,6 +97,32 @@ export default function Home() {
               </div>
             ))}
           </div>
+
+          <div className="mt-8 rounded-[28px] border border-neutral-200 bg-[#fbf6f3] p-6 lg:p-8">
+            <p className="text-[10px] uppercase tracking-[0.45em] text-mauve-600">Carte imaginée</p>
+            <h4 className="mt-3 font-serif text-3xl text-neutral-900">La sélection du soir</h4>
+            <p className="mt-3 max-w-2xl text-sm leading-relaxed text-neutral-600">
+              Une carte fictive pensée pour prolonger l’univers du lieu : élégante, concise et très marseillaise.
+            </p>
+
+            <div className="mt-6 grid gap-4 md:grid-cols-3">
+              {[
+                { name: 'Spritz de la Plaine', desc: 'Aperol, prosecco, amers d’orange, zeste de pamplemousse', price: '12€' },
+                { name: 'Mistral Blanc', desc: 'Gin floral, verjus, basilic, concombre, tonic sec', price: '14€' },
+                { name: 'Terracotta Negroni', desc: 'Gin infusé au romarin, vermouth rouge, amaro, touche de figue', price: '15€' },
+              ].map((item) => (
+                <div key={item.name} className="rounded-3xl border border-neutral-200 bg-white p-5 shadow-sm">
+                  <div className="flex items-start justify-between gap-3">
+                    <div>
+                      <p className="text-sm font-semibold uppercase tracking-[0.18em] text-neutral-900">{item.name}</p>
+                      <p className="mt-2 text-sm leading-relaxed text-neutral-600">{item.desc}</p>
+                    </div>
+                    <span className="rounded-full bg-neutral-900 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.2em] text-white">{item.price}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </section>
       </div>
     </section>
