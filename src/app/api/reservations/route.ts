@@ -32,7 +32,7 @@ export async function GET() {
     await ensureSchema();
     const result = await pool.query(`SELECT * FROM reservations ORDER BY created_at DESC LIMIT 50`);
     return NextResponse.json({ reservations: result.rows });
-  } catch {
+    } catch {
     return NextResponse.json({ error: "Impossible de charger les réservations" }, { status: 500 });
   }
 }
