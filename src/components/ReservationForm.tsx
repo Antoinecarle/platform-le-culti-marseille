@@ -11,7 +11,8 @@ export default function ReservationForm() {
     setStatus("loading");
     setMessage("");
 
-    const formData = new FormData(event.currentTarget);
+    const form = event.currentTarget;
+    const formData = new FormData(form);
     const payload = {
       name: String(formData.get("name") || ""),
       email: String(formData.get("email") || ""),
@@ -38,7 +39,7 @@ export default function ReservationForm() {
 
       setStatus("success");
       setMessage("Réservation envoyée avec succès.");
-      event.currentTarget.reset();
+      form.reset();
     } catch (error) {
       setStatus("error");
       setMessage(error instanceof Error ? error.message : "Impossible d'envoyer la réservation.");
